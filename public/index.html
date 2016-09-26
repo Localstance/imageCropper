@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image cropper</title>
+  <link rel="stylesheet" href="css/reset.css"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  <div id="wrapper">
+    <header class="header">
+      <a href="#" class="header__logo">Image cropper</a>
+    </header>
+    <main class="main">
+      <section class="main__app app">
+        <div class="app__image">
+          <canvas id="canvas" width="600" height="350"></canvas>
+        </div>
+        <div class="app__controls controls">
+          <input type="file" id="controls__upload" class="controls__upload" value="Upload image"/>
+          <div class="controls__group">
+            <a href="#" class="controls__crop button button--info disabled" data-x1="" data-x2="" data-y1="" data-y2="" data-w="" data-h="">Crop</a>
+            <a href="#" class="controls__download button button--success hidden" download="">DOWNLOAD</a>
+          </div>
+        </div>
+      </section>
+      <section class="main__gallery gallery">
+        <span class="loader">
+          <img src="images/loader.gif" alt="Loading images, please wait"/>
+        </span>
+        <ul class="gallery__list"></ul>
+      </section>
+    </main>
+    <footer class="footer">
+
+    </footer>
+  </div>
+  <script src="scripts/vendor/jquery-2.1.4.js"></script>
+  <script src="scripts/vendor/jquery.Jcrop.min.js"></script>
+  <script src="scripts/vendor/underscore.js"></script>
+  <script src="scripts/app.js"></script>
+  <script type="text/x-underscore-template" id="_gallery__item">
+    <li class="gallery__item">
+      <div class="gallery__image">
+        <img src="<%= image.link %>" width="175" height="100" alt="cropped image"/>
+      </div>
+      <a href="<%= image.link %>" download="<%= image.name %>" class="gallery__link button button--success">Download</a>
+    </li>
+  </script>
+</body>
+</html>

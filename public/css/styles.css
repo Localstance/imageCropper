@@ -1,0 +1,136 @@
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/font-oswald/oswald-regular.eot?") format("eot"),
+  url("../fonts/font-oswald/oswald-regular.woff") format("woff"),
+  url("../fonts/font-oswald/oswald-regular.ttf") format("truetype"),
+  url("../fonts/font-oswald/oswald-regular.svg#Oswald") format("svg");
+}
+
+@font-face {
+  font-family: "OswaldBold";
+  src: url("../fonts/font-oswald/oswald-bold.eot?") format("eot"),
+  url("../fonts/font-oswald/oswald-bold.woff") format("woff"),
+  url("../fonts/font-oswald/oswald-bold.ttf") format("truetype"),
+  url("../fonts/font-oswald/oswald-bold.svg#OswaldBold") format("svg");
+}
+
+body { font-size: 10px; }
+
+a { text-decoration: none; }
+
+#wrapper { width: 100%; }
+
+.header {
+  background: rgba(134,174,204,1);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(134,174,204,1)), color-stop(100%, rgba(212,228,239,1)));
+  background: -webkit-linear-gradient(left, rgba(134,174,204,1) 0%, rgba(212,228,239,1) 100%);
+  background: linear-gradient(to right, rgba(134,174,204,1) 0%, rgba(212,228,239,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#86aecc', endColorstr='#d4e4ef', GradientType=1 );
+  padding: 10px 40px;
+}
+
+.header__logo {
+  font-size: 2.5em;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'OswaldBold', Arial, sans-serif;
+}
+
+.main__app {
+  max-width: 1080px;
+  margin: 25px auto;
+}
+
+.app__image {
+  margin: 20px auto;
+  width: 600px;
+  height: 350px;
+  border: 1px solid grey;
+}
+
+.app__controls {
+  width: 600px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.main__gallery {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.gallery__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.gallery__item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+  margin-bottom: 20px;
+}
+
+.gallery__image {
+  width: 175px;
+  height: 100px;
+  border: 1px solid silver;
+  margin-bottom: 10px;
+}
+
+#canvas {
+  display: block;
+  margin: 0 auto;
+}
+
+.button {
+  display: inline-block;
+  border: 1px solid silver;
+  padding: 10px;
+  text-transform: uppercase;
+  color: #fff;
+  font: 18px/18px 'Oswald';
+  -webkit-transition: background .2s linear;
+  transition: background .2s linear;
+}
+
+.controls__download { margin-left: 15px; }
+
+.button--success {
+  background: #a3c644;
+  border-color: #a3c644;
+}
+
+.button--info {
+  background: #60bac8;
+  border-color: #60bac8;
+}
+
+.disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+.hidden { display: none; }

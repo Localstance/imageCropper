@@ -1,0 +1,14 @@
+{
+  "name": "partial-upload",
+  "version": "0.1.0",
+  "description": "Image cropper",
+  "main": "server.js",
+  "author": "Oleksandr Strelchenko",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.3"
+  },
+  "devDependencies": {
+    "body-parser": "^1.15.2"
+  }
+}
